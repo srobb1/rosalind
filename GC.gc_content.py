@@ -18,10 +18,13 @@ def calculateGC(dna):
 
 #######
 
+userfile=''
 try:
-  userfile=sys.argv[1]
-except:
+  len(sys.argv)>1 
+except SystemExit:
   print("Please Provide a fasta file")
+else:
+  userfile=sys.argv[1]
 
 seqs={}
 id='';
